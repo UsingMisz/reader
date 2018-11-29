@@ -1,6 +1,6 @@
 # reader
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/UsingMisz/reader/#license)
 
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/UsingMisz/reader/#license)
 [![platform](https://img.shields.io/badge/platform-javascript-green.svg)](https://www.javascript.com)
 
 
