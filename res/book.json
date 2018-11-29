@@ -1,0 +1,196 @@
+{
+	"datas": [{
+		"name": "斗罗大陆",
+		"img": "../image/swipe/book.jpg",
+    "author":"丛林狼",
+		"id": "01"
+	}, {
+		"name": "斗破苍穹",
+		"img": "../image/swipe/book05.jpg",
+      "author":"王五",
+		"id": "02"
+	}, {
+		"name": "斗破苍穹",
+		"img": "../image/swipe/book06.jpg",
+      "author":"李白",
+		"id": "03"
+	},
+	{
+ 	"name": "斗破苍穹",
+ 	"img": "../image/swipe/book07.jpg",
+    "author":"丛林狼",
+ 	"id": "04"
+},
+{
+ "name": "斗破苍穹",
+ "img": "../image/swipe/book08.jpg",
+   "author":"丛林狼",
+ "id": "05"
+}, {
+	"name": "斗破苍穹",
+	"img": "../image/swipe/book09.jpg",
+    "author":"丛林狼",
+	"id": "06"
+}],
+"recommend":[{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "07"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+}],
+"man":[{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "07"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+],
+"more":[{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "07"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+],
+"top5":[{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "07"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+],
+"man":[{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "07"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+{
+"name":"绝世武帝",
+"img":"../image/swipe/book09.jpg",
+"author":"丛林狼",
+"describe":"从前有个八卦图，修成第一幅，然后就变得很吊,从前有个八卦图，修成第一幅，然后就变得很吊",
+	"id": "08"
+},
+],
+
+
+
+};

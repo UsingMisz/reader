@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+
+    section {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    header {
+        position: relative;
+        height: auto;
+    }
+
+    footer {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        box-sizing: border-box;
+        height: 50px;
+        background-color: rgb(250, 250, 250);
+        border-top: 1px solid #ccc;
+    }
+
+    footer>div {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: 100%;
+        color: rgb(165, 165, 165);
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 4px;
+        padding-top: 34px;
+        background-repeat: no-repeat;
+        background-position: center 6px;
+        background-size: auto 24px;
+    }
+
+    footer>div:nth-child(1) {
+        background-image: url(./image/footer/home.png);
+    }
+
+    footer>div:nth-child(2) {
+        background-image: url(./image/footer/groupbuy.png);
+    }
+
+    footer>div:nth-child(3) {
+        background-image: url(./image/footer/find.png);
+    }
+
+    footer>div:nth-child(4) {
+        background-image: url(./image/footer/my.png);
+    }
+
+    footer>div:nth-child(1).active {
+        background-image: url(./image/footer/home_act.png);
+        color:  rgb(9,192,135);
+    }
+
+    footer>div:nth-child(2).active {
+        background-image: url(./image/footer/groupbuy_act.png);
+        color:  rgb(9,192,135);
+    }
+
+    footer>div:nth-child(3).active {
+        background-image: url(./image/footer/find_act.png);
+        color:  rgb(9,192,135);
+    }
+
+    footer>div:nth-child(4).active {
+        background-image: url(./image/footer/my_act.png);
+        color: rgb(9,192,135);
+    }
+
+    .header-item {
+        position: relative;
+        display: none;
+        font-size: 23px;
+        color: white;
+
+    }
+
+    .header-item-act {
+        display: block;
+        text-align: center;
+
+
+    }
+
+    header>div:nth-child(1) {
+        position: relative;
+        background-color:  rgb(9,192,135);
+        height: 40px;
+    }
+
+    header>div:nth-child(2) {
+        position: relative;
+        height: 40px;
+        background-color: rgb(9,192,135);
+    }
+
+    header>div:nth-child(3) {
+        position: relative;
+        height: 40px;
+        background-color:  rgb(9,192,135);
+    }
+
+    /* header home */
+    </style>
+</head>
+<body>
+
+  <header id="header">
+      <div class="header-item header-item-act" id="book_frame">
+         书架
+      </div>
+      <div class="header-item" id="book_store_frame">
+          书城
+      </div>
+      <div class="header-item" id="find_frame">
+           搜索
+      </div>
+      <div class="header-item" id="my_frame">
+      </div>
+  </header>
+
+<section>
+
+
+</section>
+
+
+          <footer id="footer">
+              <div class="menu active" tapmode="active" onclick="fnChange(0)">书架</div>
+              <div class="menu" tapmode="active" onclick="fnChange(1)">书城</div>
+              <div class="menu" tapmode="active" onclick="fnChange(2)">搜索</div>
+              <div class="menu" tapmode="active" onclick="fnChange(3)">我的</div>
+          </footer>
+
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript">
+	 //var UIScrollPicture;
+    apiready = function(){
+		console.log("Hello APICloud");
+//  UIScrollPicture = api.require('UIScrollPicture');
+var winName = api.winName;
+console.log(winName);
+    fnInitListener();
+
+  fnInit();
+
+  fnChange(1);
+   fnOpenSlide();
+  //var frames = ['book_frame', 'book_store_frame', 'find_frame', 'my_frame'];
+ fnOpenWelcome();
+
+};
+function fnOpenSlide(){
+
+  api.openSlidLayout({
+     type : 'left',
+     leftEdge : 200,
+     fixedPane : {
+      name : 'fixed',
+      url : 'html/fixed.html'
+     },
+     slidPane : {
+      name : 'root',
+      url : 'index.html'
+     }
+    }, function(ret) {
+    });
+
+}
+//退出回退建
+    function fnInitListener() {
+        var flag = false;
+        api.addEventListener({
+            name: 'keyback'
+        }, function(ret, err) {
+            if (false == flag) {
+                api.toast({
+                    msg: '再按一次退出',
+                    duration: 2000,
+                    location: 'bottom'
+                });
+                flag = true;
+                setTimeout(function() {
+                    flag = false;
+                }, 2000);
+            } else {
+                api.closeWidget({
+                    silent: true
+                });
+            }
+        });
+}
+
+
+
+
+var headers, footers, headerHeight, footerHeight ;
+
+function fnInit() {
+    var header = $api.byId('header');
+    var footer = $api.byId('footer');
+
+    headers = $api.domAll(header, '.header-item');
+    footers = $api.domAll(footer, 'div');
+
+    for (var i = 0; i < headers.length; i++) {
+        $api.fixIos7Bar(headers[i]);
+    }
+
+    headerHeight = $api.offset(header).h;
+    footerHeight = $api.offset(footer).h;
+};
+
+    var frames = ['book_frame', 'book_store_frame', 'find_frame', 'my_frame'];
+function fnChange(index) {
+  for (var i = 0; i < headers.length; i++) {
+      if (index == i) {
+
+          $api.addCls(headers[i], 'header-item-act');
+          $api.addCls(footers[i], 'active');
+
+ var y = 3 == index ? 1 : headerHeight;
+
+  api.openFrame({
+      name: frames[i],
+      url: './html/' + frames[i] + '.html',
+      bounces: false,
+      bgColor: '#f0f0f0',
+      vScrollBarEnabled: false,
+      hScrollBarEnabled: false,
+      rect: {
+          x: 0,
+          y: y,
+          w: 'auto',
+          h: api.frameHeight -y - footerHeight
+      }
+  });
+
+
+
+
+
+      } else {
+          $api.removeCls(headers[i], 'header-item-act');
+          $api.removeCls(footers[i], 'active');
+          api.setFrameAttr({
+              name: frames[i],
+              hidden: true
+          });
+
+      }
+  }
+};
+
+function fnOpenWelcome() {
+    var frames = [];
+    for (var i = 1; i <= 3; i++) {
+        frames.push({
+            name: 'welcome_0' + i,
+            url: './html/welcome_0' + i + '.html',
+            bounces: false,
+            bgColor: './image/welcome/welcome0' + i + '.jpeg'
+        });
+    }
+
+    api.openFrameGroup({
+        name: 'welcome_group',
+        scrollEnabled: true,
+        rect: {
+            x: 0,
+            y: 0,
+            w: 'auto',
+            h: 'auto'
+        },
+        index: 0,
+        frames: frames
+    });
+};
+
+
+</script>
+</html>

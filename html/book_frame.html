@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <script type="text/javascript" src="../script/jquery.js"></script>
+    <script type="text/javascript" src="../script/jquery.mobile-1.4.5.js"></script>
+     <script type="text/javascript" src="../script/jquery-min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css" />
+
+</head>
+<body>2
+
+
+    <label id="con">Hello APP0000</label>
+    <div id="arrays">
+    </div>
+
+	<div data-role="page">
+  <div data-role="content">
+    <p>如果您点击我，我会消失。</p>
+    <p>点击我，我会消失。</p>
+    <p>点击我，我也会消失。</p>
+    <form method="post" action="get.html">
+  <div class="ui-field-contain">
+    <label for="fullname">用户名：</label>
+    <input type="text" name="name" id="name" placeholder="姓名" data-ajax="true">
+    <label for="fullname">密码 ：</label>
+    <input type="text" name="password" id="password" placeholder="密码" data-ajax="true">
+
+    <label for="tel1">电话：</label>
+         <input type="tel" data-clear-btn="true" name="tel1" id="tel1" value="" placeholder="电话">
+    <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="邮箱">
+
+    <label for="date-2">生日：</label>
+     <input type="date" data-clear-btn="true" name="birth" id="birth" value="" >
+
+
+<fieldset data-role="controlgroup">
+    <legend>性别：</legend>
+      <label for="male">男性</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">女性</label>
+      <input type="radio" name="gender" id="female" value="female">
+    </fieldset>
+
+
+
+  </div>
+  <center>
+  <input type="button" data-inline="true" data-theme="a" onclick="show()" value="提交">
+</center>
+</form>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/doT.min.js"></script>
+<script type="text/javascript" src="../script/doT.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").on("click",function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+
+
+</body>
+
+</html>

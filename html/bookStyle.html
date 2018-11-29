@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+
+</head>
+<body>
+    <label id="con">Hello APP--bookStyle</label>
+    <label id="title"></label>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+
+<script>
+apiready =function(){
+  var title= $api.byId('title');
+  title.innerHTML= api.pageParam.bookStyle;
+}
+
+
+</script>
+</html>

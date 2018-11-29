@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="tephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+
+		    <style type="text/css">
+        html,
+
+				body {
+					height: 100%;
+			    	background: #f0f0f0;
+
+				}
+         .bookcover{
+          	height: 100%;
+      }
+				.swipe-wrap {
+					padding-top: 10px;
+						padding-bottom: 20px;
+						float: left;
+						box-sizing: border-box;
+				    width: 'auto';
+						position: relative;
+						background: white;
+				}
+
+				.swipe-page-item {
+						float: left;
+						width: 20%;
+						text-align: center;
+				}
+				.swipe-page-item>img {
+						width: 40%;
+				}
+
+				.swipe-page-item>span {
+						display: block;
+						font-size: 13px;
+						margin-top: 5px;
+				}
+        .bookstore-item{
+					float: left;
+					width: 33.3%;
+					text-align: center;
+					padding-top: 10px;
+        }
+
+	 	.bookstore-item>img {
+	 					width: 70%;
+
+				}
+
+
+			.bookstore-item>span {
+						display: block;
+						font-size: 15px;
+						margin-top: 5px;
+
+				}
+			.bookstore-item>div {
+						display: block;
+						font-size: 13px;
+						margin-top: 3px;
+						color: grey;
+				}
+
+
+				.content01{
+					float: left;
+					width: 100%;
+					position: relative;
+					background: white;
+				}
+				.title{
+					margin-left:20px;
+					font-size: 17px;
+					margin-top: 15px;
+
+				}
+
+				.home-book-list .item {
+						position: relative;
+						display: block;
+						padding-left: 27px;
+
+				}
+
+				.home-book-list .cnt {
+						padding: 7px 10px 10px 0;
+						display: flex;
+						display: -webkit-box;
+						min-height: 78px;
+						background-size: auto 1px;
+				}
+
+				.home-book-list .pic {
+						background: center;
+				}
+
+				.home-book-list img {
+						width: 70%;
+						margin-top: 7px;
+						margin-bottom: 5px;
+						border-radius: 3px;
+						margin-right: 20px;
+				}
+
+				.home-book-list .wrap {
+						-webkit-box-flex: 1;
+				}
+
+				.home-book-list .wrap2 {
+						display: table;
+						height: 88px;
+						width: 100%;
+				}
+
+				.home-book-list .content {
+						-webkit-box-flex: 1;
+						box-flex: 1;
+						display: table-cell;
+						vertical-align: middle;
+				}
+
+				.home-book-list .name {
+						color: #333;
+						/*line-height: 16px;*/
+						font-size: 18px;
+						max-width: 11em;
+						white-space: nowrap;
+						word-wrap: normal;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						min-height: 10px;
+						padding-bottom: 2px;
+						padding-top: 3px;
+						display: inline-block;
+				}
+
+				.home-book-list .author {
+						color: #666;
+						line-height: 16px;
+						font-size: 13px;
+						max-height: 30px;
+				}
+
+
+
+				.home-book-list .describe {
+						margin-top: 9px;
+						/*margin-bottom: 11px;*/
+						color: black;
+						font-size: 13px;
+						position: relative;
+						line-height: 15px;
+						display: flex;
+						display: -webkit-box;
+						height: 15px;
+				}
+
+
+
+				.Fix:after {
+						display: block;
+						content: '';
+						height: 0;
+						clear: both;
+				}
+
+				.highlight {
+		 			 opacity: 0.7;
+		 	 }
+
+
+				</style>
+	</head>
+
+	<body>
+ <div id="pictures" class="bookcover"></div>
+				<div class="swipe-wrap">
+										<div class="swipe-page-item open-win" win="bookStyle" param='{"type":0,"bookStyle":0}' >
+												<img src="../image/swipe/around.png">
+												<span>男频</span>
+										</div>
+										<div class="swipe-page-item open-win" win="bookStyle" param='{"type":0,"bookStyle":1}'>
+												<img src="../image/swipe/around.png">
+												<span>女频</span>
+										</div>
+										<div class="swipe-page-item open-win" win="bookStyle" param='{"type":0,"bookStyle":2}'>
+												<img src="../image/swipe/around.png" >
+												<span>分类</span>
+										</div>
+										<div class="swipe-page-item open-win"  win="bookStyle" param='{"type":0,"bookStyle":3}'>
+												<img src="../image/swipe/around.png">
+												<span>出版</span>
+										</div>
+										<div class="swipe-page-item open-win" win="bookStyle" param='{"type":0,"bookStyle":4}'>
+												<img src="../image/swipe/around.png">
+												<span>排行</span>
+										</div>
+					</div>
+
+					<div class="swipe-wrap" id="list01">
+				</div>
+
+
+
+
+
+				<div class="content01" style="margin-top:20px" >
+
+             <div class="title">重磅推荐</div>
+             <div id="list02" class="home-book-list"></div>
+
+				</div>
+
+				<div  id="list03">
+
+				</div>
+
+
+
+</div>
+
+
+
+
+
+	</body>
+
+
+  <script type="text/javascript" src="../script/common.js"></script>
+					<script type="text/javascript" src="../script/api.js"></script>
+	        <script type="text/javascript" src="../script/doT.min.js"></script>
+          <script type="text/javascript" src="../script/list.js"></script>
+
+
+				<script type="text/template" id="template01">
+				{{~ it.datas:v:index}}
+														<div class="bookstore-item open-win" win="book" param='{"type":1,"bookId": "{{=v.id}}" }' >
+																<img src="{{=v.img}}">
+																<span>{{=v.name}}</span>
+															  	<div>{{=v.author}}</div>
+														</div>
+						{{~}}
+				</script>
+
+          <!--  15210121107 赵则宇-->
+				<script type="text/template" id="template02">
+				{{~ it.recommend:v:index}}
+				<div class="item Fix hightitem open-win" win="book" param='{"type":1,"bookId":"{{=v.id }}" }'>
+						<div class="cnt">
+								<img  class="pic" src="{{=v.img}}">
+								<div class="wrap">
+										<div class="wrap2">
+												<div class="content">
+														<div class="name">{{=v.name}}</div>
+
+														<div class="author">{{=v.author}}</div>
+
+														<div class="describe">{{=v.describe}}</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+						{{~}}
+				</script>
+
+				<script type="text/template" id="template03">
+
+					{{~ it.bookType:i }}
+						<div class="content01" style="margin-top:20px">
+					<div class="title">{{=i.name}}</div>
+					{{~ i.books:v}}
+					<div class=" home-book-list">
+					<div class="item Fix hightitem  open-win " style="margin-top:20px" win="book" param='{"type":1,"bookId":"{{=v.id }}" }'>
+							<div class="cnt">
+									<img  class="pic"  src="{{=v.img}}">
+									<div class="wrap">
+											<div class="wrap2">
+													<div class="content">
+															<div class="name">{{=v.name}}</div>
+
+															<div class="author">{{=v.author}}</div>
+
+															<div class="describe">{{=v.describe}}</div>
+													</div>
+											</div>
+									</div>
+							</div>
+					</div>
+				</div>
+						{{~}}
+							</div>
+						{{~}}
+
+				</script>
+
+
+
+	<script type="text/javascript">
+
+	var UIScrollPicture,picture;
+	 apiready = function(){
+
+
+	  UIScrollPicture = api.require('UIScrollPicture');
+	  picture = $api.byId('picture');
+	   fnInitPicture();
+	   initHomeBook();
+	 initHomeBookList();
+     initHomeBookList01();
+	};
+
+
+ function fnInitPicture(){
+	 var height = Math.ceil(api.winWidth / 3);
+	 pictures.style.height = height + 'px';
+	 UIScrollPicture.open({
+		rect : {
+			x : 0,
+			y :0,
+			w : api.winWidth,
+			h : height,
+		},
+		data : {
+			paths : ['widget://image/swipe/book01.jpg', 'widget://image/swipe/book02.jpg', 'widget://image/swipe/book03.jpg'],
+		},
+		styles : {
+			indicator : {
+				align : 'center',
+				color : '#FFFFFF',
+				activeColor : '#DA70D6'
+			}
+		},
+		placeholderImg : 'widget://res/cat.jpg',
+		contentMode : 'scaleToFill',
+		interval : 3,
+		loop : true,
+		fixed : false,
+		fixedOn: api.frameName,
+	}, function(ret, err) {
+		if (ret) {
+		//	alert(JSON.stringify(ret));
+		} else {
+		//	alert(JSON.stringify(err));
+		}
+	});
+ }
+//	var mySlider = document.getElementById('mySlider');
+
+	</script>
+
+
+
+</html>
