@@ -11,8 +11,8 @@ apicloud 图书阅读 ，UI参考 微信小程序 阅读界面
 A grace open source reader-ui which following the weixin-ui. 
 ### Screenshots
 
-![screenshots](assert/)
-
+![screenshots](assert/main.png)
+![screenshots](assert/login_true.png)
 ### Gif Preview
 
 ![gif](assert/10.gif)
